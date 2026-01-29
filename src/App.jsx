@@ -2,7 +2,8 @@ import "./App.css";
 import Button from "./components/Button.jsx";
 import Card from "./components/Card.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Counter from "./components/Counter.jsx";
+import Counter from "./projects/basicCounter/Counter.jsx";
+import QueueManagement from "./projects/queueManagementSystem/QueueManagement.jsx";
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <h2 className="text-blue-600 dark:text-sky-400 font-bold border-2 rounded-xl p-3">
+      <h2 className="text-blue-600 dark:text-sky-400 font-bold border-2 rounded-xl p-3 mt-3">
         Learning React With Reviion and using Tailwind CSS
       </h2>
 
@@ -40,9 +41,25 @@ function App() {
           title="Cappuccino"
           details="Cappuccino with rich foam and espresso."
         />
+
+        <Card
+          imageurl="https://www.shutterstock.com/image-photo/flat-white-coffee-black-cup-600nw-2637279775.jpg"
+          title="Milk Coffee"
+          details="Milk Coffee with having best milk in the market."
+        />
+
+        <Card
+          imageurl="https://www.shutterstock.com/image-photo/flat-white-coffee-black-cup-600nw-2637279775.jpg"
+          title="Milk Coffee"
+          details="Milk Coffee with having best milk in the market."
+        />
+
       </div>
 
       <Counter />
+
+      <QueueManagement />
+        
       
     </>
   );

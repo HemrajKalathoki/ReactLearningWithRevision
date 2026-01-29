@@ -7,7 +7,7 @@ function Counter() {
 
   return (
     <>
-      <div className="bg-gray-900 rounded-xl py-5">
+      <div className="bg-gray-900 rounded-xl py-5 mt-5">
         <h1 className="text-white font-bold text-2xl">Counter</h1>
         <div className="card text-white font-semibold">Count is {counter}</div>
         <div className="flex gap-4 justify-center">
