@@ -1,8 +1,21 @@
 import "./App.css";
+import Button from "./components/Button.jsx";
 import Card from "./components/Card.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Counter from "./components/Counter.jsx";
 
 function App() {
+
+  
+
+  // const incrementHandler = (numVal) => {
+  //   setCounter(counter + 1);
+
+  //   setCounter((prevCounter) => prevCounter + numVal + 1);  // This is the exactly what we should do to avoid stale closure problem.
+  //   setCounter((prevCounter) => prevCounter + 1);
+
+  // }
+
   return (
     <>
       <Navbar />
@@ -28,6 +41,9 @@ function App() {
           details="Cappuccino with rich foam and espresso."
         />
       </div>
+
+      <Counter />
+      
     </>
   );
 }

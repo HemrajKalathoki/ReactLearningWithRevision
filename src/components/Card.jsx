@@ -13,7 +13,7 @@ function Card({ title, details, imageurl }) {
         <div className="p-4">
           <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
           <p className="mt-2 text-gray-600 text-sm">{details}</p>
-          <Button />
+          <Button title={"Buy Now"} cstyle={"bg-blue-500"}/>
         </div>
       </div>
     </>
