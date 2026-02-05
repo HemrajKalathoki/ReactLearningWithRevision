@@ -26,7 +26,7 @@ function QueueManagement() {
   };
 
   return (
-    <div className="bg-gray-900 mt-4 rounded-xl py-[20px]">
+    <div className="bg-gray-900 mt-4 rounded-xl py-[20px] text-center">
       <div>
         <h1 className="font-bold text-2xl text-indigo-500">
           Queue Management System

@@ -3,6 +3,7 @@ import Button from "./components/Button.jsx";
 import Card from "./components/Card.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Counter from "./projects/basicCounter/Counter.jsx";
+import PropsAndComponents from "./projects/propsAndComponents/PropsAndComponents.jsx";
 import QueueManagement from "./projects/queueManagementSystem/QueueManagement.jsx";
 
 function App() {
@@ -59,6 +60,11 @@ function App() {
       <Counter />
 
       <QueueManagement />
+
+
+      <PropsAndComponents />
+
+      
         
       
     </>
