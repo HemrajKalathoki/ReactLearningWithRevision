@@ -90,15 +90,17 @@ function PropsAndComponentsContent() {
 
         <div className="space-y-8">
           <div id="basic" className="scroll-mt-200">
-            <RefProps />
+            <ChildrenProps />
           </div>
         </div>
 
         <div className="space-y-8">
           <div id="basic" className="scroll-mt-200">
-            <ChildrenProps />
+            <RefProps />
           </div>
         </div>
+
+        
 
         <div className="space-y-8">
           <div id="basic" className="scroll-mt-200">
