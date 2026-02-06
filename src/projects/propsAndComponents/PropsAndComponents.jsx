@@ -38,7 +38,7 @@ function Navigation() {
   ];
 
   return (
-    <nav className={`sticky z-50 shadow-md text-center pt-1`}>
+    <nav className={`sticky z-50 shadow-md text-center pt-2`}>
       <div>
         <div>
           {sections.map((section) => (
