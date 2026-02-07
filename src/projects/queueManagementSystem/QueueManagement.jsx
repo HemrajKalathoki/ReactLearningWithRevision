@@ -36,7 +36,7 @@ function QueueManagement() {
         </p>
       </div>
 
-      <div className="mt-4 flex gap-5 px-5 w-5/6 mx-auto pb-[30px]">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-5 px-5 mx-auto pb-[30px]">
         <QueueForm onAddCustomer={addToQueue} />
 
         <DisplayComponent

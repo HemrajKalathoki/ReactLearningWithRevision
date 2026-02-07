@@ -16,7 +16,7 @@ function DisplayComponent({ queue, onUpdateStatus, onRemove }) {
 
   return (
     <>
-      <div className="bg-zinc-800 rounded-lg py-5 w-2/3">
+      <div className="bg-zinc-800 rounded-lg py-5">
         <h1 className="text-gray-50 text-xl font-bold text-left pl-5 mb-3">
           Current Queue
         </h1>

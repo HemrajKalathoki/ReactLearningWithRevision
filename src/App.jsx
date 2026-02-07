@@ -25,7 +25,7 @@ function App() {
         Learning React With Reviion and using Tailwind CSS
       </h2>
 
-      <div className="flex gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         <Card
           imageurl="https://media.istockphoto.com/id/174684628/photo/pouring-fresh-coffee.jpg?s=612x612&w=0&k=20&c=pXOkO9bhWVKA7s4JGtvz9aPMZzkF24noXPdXlMkTQ_A="
           title="Strong Black Coffee"

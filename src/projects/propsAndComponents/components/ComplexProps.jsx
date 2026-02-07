@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 
 function UserProfileCard({ user, theme, actions }) {
   return (
@@ -35,30 +35,47 @@ function UserProfileCard({ user, theme, actions }) {
         <div className="flex justify-around text-center">
           {Object.entries(user.stats).map(([key, value]) => (
             <div key={key} className="">
-              <div className="text-md lg:text-2xl font-bold">
-                {value}
-              </div>
+              <div className="text-md lg:text-2xl font-bold">{value}</div>
               <div className="capitalize text-xs lg:text-sm">{key}</div>
             </div>
           ))}
         </div>
       )}
 
-        {actions && (
-          <div className="flex gap-3 mt-4 justify-between">
-            <button
-              onClick={actions.primary.onClick }
-              className={`${actions.primary.className} w-full transition-all duration-500 cursor-pointer scale-100 hover:scale-101 text-xs lg:text-lg`}
-            >
-              {actions.primary.label}
-            </button>
-            <button
-              onClick={actions.secondary.onClick}
-              className={`${actions.secondary.className} w-full transition-all duration-500 cursor-pointer scale-100 hover:scale-101`}
-            >
-              {actions.secondary.label}
-            </button>
-          </div> ) }
+      {/* {actions && (
+        <div className="flex gap-3 mt-4 justify-between">
+          <button
+            onClick={actions.primary.onClick}
+            className={`${actions.primary.className} w-full transition-all duration-500 cursor-pointer scale-100 hover:scale-101 text-xs lg:text-lg`}
+          >
+            {actions.primary.label}
+          </button>
+          <button
+            onClick={actions.secondary.onClick}
+            className={`${actions.secondary.className} w-full transition-all duration-500 cursor-pointer scale-100 hover:scale-101 text-xs lg:text-lg`}
+          >
+            {actions.secondary.label}
+          </button>
+        </div>
+      )} */}
+
+      {actions && (
+        <div className="flex gap-3 mt-4 justify-between">
+          {["primary", "secondary"].map((key) => {
+            const action = actions[key];
+            if (!action) return null;
+            return (
+              <button
+                key={key}
+                onClick={action.onClick}
+                className={`${action.className} w-full transition-all duration-500 cursor-pointer scale-100 hover:scale-101 text-xs lg:text-lg`}
+              >
+                {action.label}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

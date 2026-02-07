@@ -62,7 +62,7 @@ function Navigation() {
 function PropsAndComponentsContent() {
   const isDark = true;
   return (
-    <div className="min-h-screen bg-gray-800 mt-4 rounded">
+    <div className="min-h-screen bg-gray-800 mt-4 rounded w-full">
       <Navigation />
       <div className="container mx-auto px-4 py-8">
         <header
