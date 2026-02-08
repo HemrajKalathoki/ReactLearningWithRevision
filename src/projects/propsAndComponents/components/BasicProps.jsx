@@ -26,14 +26,13 @@ function BasicProps() {
   const [clickCount, setClickCount] = useState(0);
   return (
     <section className="bg-white p-8 rounded-lg space-y-4 shadow-2xl">
-      <h2 className="text-5xl font-bold text-gray-800">Basic Props</h2>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt magni
-        recusandae sunt odit sint et ex expedita, asperiores at in?
+      <h2 className="text-3xl lg:text-5xl font-bold text-gray-800">Basic Props</h2>
+      <p className="text-gray-800">
+        Basic Props are the most common type of props used in React. They allow you to pass simple values like strings, numbers, booleans, and functions to components. These props can be used to customize the behavior and appearance of components.
       </p>
       <div className="space-y-4">
         <h3 className="text-xl font-bold text-gray-700">Different Colors</h3>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap lg:gap-4 gap-2">
           <Button
             text="Primary Button"
             color="primary"

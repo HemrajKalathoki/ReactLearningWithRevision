@@ -31,14 +31,13 @@ function Container({ children, layout = "vertical" }) {
 
 function ChildrenProps() {
   return (
-    <section className="bg-gray-100 p-8 rounded-xl shadow-md mt-5">
+    <section className="bg-gray-100 px-2 md:px-6 sm:px-4 py-8 lg:p-8 rounded-xl shadow-md mt-5">
       <h2 className="text-gray-800 text-5xl font-bold">Children Props</h2>
-      <p className="my-5">
+      <p className="my-5 text-gray-800">
         The <span className="bg-gray-200 rounded px-2">Children</span> Prop allows you to pass JSX elements or components as children to a parent component. This is useful for creating reusable components that can wrap other content.
       </p>
 
       <div className="space-y-6">
-        <div>
           <h3 className="text-xl text-gray-800 font-bold mb-4">Card Component with Children:</h3>
           <Container layout="grid">
             <Card title="User Profile" color="blue">
@@ -77,7 +76,6 @@ function ChildrenProps() {
             </Card>
 
           </Container>
-        </div>
       </div>
     </section>
   );

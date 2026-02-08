@@ -16,7 +16,7 @@ function DisplayComponent({ queue, onUpdateStatus, onRemove }) {
 
   return (
     <>
-      <div className="bg-zinc-800 rounded-lg py-5">
+      <div className="bg-zinc-800 rounded-lg py-5 md:col-span-2">
         <h1 className="text-gray-50 text-xl font-bold text-left pl-5 mb-3">
           Current Queue
         </h1>
@@ -42,7 +42,7 @@ function DisplayComponent({ queue, onUpdateStatus, onRemove }) {
                   </span>
                 </div>
 
-                <div className="flex gap-2 mt-2">
+                <div className="flex flex-col md:flex-row gap-2 mt-2">
                   {customer.status === "waiting" && (
                     <button
                       className="bg-blue-500 text-white px-3 py-1 max-h-fit rounded hover:bg-blue-700"

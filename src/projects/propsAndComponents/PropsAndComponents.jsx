@@ -7,8 +7,6 @@ import ComplexProps from "./components/ComplexProps";
 import ThemeToggler from "./components/ThemeToggler";
 
 function Navigation() {
-  const isDark = true;
-
   const sections = [
     {
       id: "basic",
@@ -32,28 +30,26 @@ function Navigation() {
     },
     {
       id: "theme",
-      label: "theme Props",
+      label: "Theme Props",
       icon: "🎨",
     },
   ];
 
   return (
-    <nav className={`sticky z-50 shadow-md text-center pt-2`}>
-      <div>
-        <div>
-          {sections.map((section) => (
-            <button
-              type="button"
-              key={section.id}
-              className={`relative group px-4 py-2 rounded-3xl font-medium bg-sky-600 text-white my-2 mx-4 overflow-hidden  cursor-pointer`}
-            >
-              <span className="absolute left-0 top-0 h-full w-0 bg-sky-700 transition-all duration-500 ease-in-out group-hover:w-full rounded-3xl"></span>
-              <span className="relative z-10 items-center gap-2">
-                {section.icon} {section.label}
-              </span>
-            </button>
-          ))}
-        </div>
+    <nav className="sticky top-0 z-50 shadow-md bg-gray-800 text-center py-2">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-2">
+        {sections.map((section) => (
+          <button
+            key={section.id}
+            type="button"
+            className="relative group px-3 sm:px-4 py-1 sm:py-2 rounded-3xl font-medium bg-sky-600 text-white overflow-hidden cursor-pointer text-xs sm:text-sm"
+          >
+            <span className="absolute left-0 top-0 h-full w-0 bg-sky-700 transition-all duration-500 ease-in-out group-hover:w-full rounded-3xl"></span>
+            <span className="relative z-10 flex items-center gap-1 sm:gap-2">
+              {section.icon} {section.label}
+            </span>
+          </button>
+        ))}
       </div>
     </nav>
   );
@@ -62,57 +58,45 @@ function Navigation() {
 function PropsAndComponentsContent() {
   const isDark = true;
   return (
-    <div className="min-h-screen bg-gray-800 mt-4 rounded w-full">
+    <div className="min-h-screen bg-gray-900 text-white mt-4 rounded w-full">
       <Navigation />
-      <div className="container mx-auto px-4 py-8">
-        <header
-          className={`text-center mb-12 transition-colors duration-200 ${isDark ? "text-white" : "text-gray-500"}`}
-        >
-          <h1 className="text-5xl font-bold mb-4">React Props Explaining</h1>
-          <p
-            className={`text-xl ${isDark ? "text-gray-300" : "text-gray-600"}`}
-          >
+
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 py-8">
+        <header className="text-center mb-12 transition-colors duration-200">
+          <h1 className="text-2xl lg:text-4xl font-bold mb-4">
+            React Props Explaining
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 lg:mb-2">
             Learn how to use props in React components
           </p>
-
-          <div
-            className={`inline-block rounded-full mt-4 px-6 py-2 ${isDark ? "text-gray-300" : " text-gray-800"}`}
-          >
-            Built with NPM + vite + React + TailwindCSS
+          <div className="inline-block rounded-full mt-4 px-4 text-gray-300 text-sm sm:text-base">
+            Built with NPM + Vite + React + TailwindCSS
           </div>
         </header>
 
-        <div className="space-y-8">
-          <div id="basic" className="scroll-mt-200">
+        <div className="space-y-12">
+          <section id="basic" className="scroll-mt-24">
             <BasicProps />
-          </div>
-        </div>
+          </section>
 
-        <div className="space-y-8">
-          <div id="basic" className="scroll-mt-200">
+          <section id="children" className="scroll-mt-24">
             <ChildrenProps />
-          </div>
-        </div>
+          </section>
 
-        <div className="space-y-8">
-          <div id="basic" className="scroll-mt-200">
+          <section id="complex" className="scroll-mt-24">
             <ComplexProps />
-          </div>
-        </div>
+          </section>
 
-        <div className="space-y-8">
-          <div id="basic" className="scroll-mt-200">
+          <section id="ref" className="scroll-mt-24">
             <RefProps />
-          </div>
-        </div>
+          </section>
 
-        <div className="space-y-8">
-          <div id="basic" className="scroll-mt-200">
+          <section id="theme" className="scroll-mt-24">
             <ThemeToggler />
-          </div>
+          </section>
         </div>
 
-        <p className="text-center text-gray-400 mt-8">
+        <p className="text-center text-gray-400 mt-12 mb-4">
           Made for Revision to Props and Components.
         </p>
       </div>

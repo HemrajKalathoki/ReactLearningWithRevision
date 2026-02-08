@@ -21,7 +21,7 @@ function QueueForm({ onAddCustomer }) {
 
   return (
     <>
-      <div className="bg-zinc-800 rounded-lg w-3/5 h-fit">
+      <div className="bg-zinc-800 rounded-lg w-full h-fit py-3">
         <form className="py-4 px-4" onSubmit={handleSubmit}>
           <h1 className="text-indigo-500 text-2xl font-bold text-left">
             Add to Queue

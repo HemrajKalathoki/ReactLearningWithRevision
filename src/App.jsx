@@ -21,9 +21,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <h2 className="text-blue-600 dark:text-sky-400 font-bold border-2 rounded-xl p-3 mt-3">
+      {/* <h2 className="text-blue-600 dark:text-sky-400 font-bold border-2 rounded-xl p-3 mt-3">
         Learning React With Reviion and using Tailwind CSS
-      </h2>
+      </h2> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         <Card

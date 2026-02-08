@@ -18,10 +18,7 @@ function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
           {navItems.map((item) => (
-            <li
-              key={item}
-              className="relative cursor-pointer group"
-            >
+            <li key={item} className="relative cursor-pointer group">
               <span className="group-hover:text-indigo-100 transition-colors">
                 {item}
               </span>
@@ -40,19 +37,20 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {open && (
-        <ul className="md:hidden mt-4 flex flex-col gap-4 text-white font-medium">
-          {navItems.map((item) => (
-            <li
-              key={item}
-              className="cursor-pointer border-b border-indigo-300 pb-2"
-              onClick={() => setOpen(false)}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out
+        ${open ? "max-h-64 opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"}`}
+      >
+        {navItems.map((item) => (
+          <li
+            key={item}
+            className="text-white font-medium border-b border-indigo-300 py-2 cursor-pointer"
+            onClick={() => setOpen(false)}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }
