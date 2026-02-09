@@ -1,9 +1,10 @@
-function Card({ children, title, color = "blue" }) {
+export function Card({ children, title, color = "blue" }) {
   const colorClasses = {
     blue: "bg-blue-200 text-blue-800 border-blue-500",
     red: "bg-red-200 text-red-800 border-red-500",
     green: "bg-green-200 text-green-800 border-green-500",
     purple: "bg-purple-200 text-purple-800 border-purple-500",
+    yellow: "bg-yellow-50 text-yellow-800 border-yellow-500",
   };
 
   return (

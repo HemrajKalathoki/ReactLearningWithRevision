@@ -36,7 +36,7 @@ function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 shadow-md bg-gray-800 text-center py-2">
+    <nav className="sticky top-15 z-50 shadow-md bg-gray-800 text-center py-2">
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-2">
         {sections.map((section) => (
           <button
