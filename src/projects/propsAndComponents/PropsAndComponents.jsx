@@ -36,7 +36,7 @@ function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-15 z-50 shadow-md bg-gray-800 text-center py-2">
+    <nav className="sticky top-20 z-50 shadow-md bg-gray-800 text-center py-2 rounded-xl">
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-2">
         {sections.map((section) => (
           <button
@@ -61,7 +61,7 @@ function PropsAndComponentsContent() {
   const {isDark} = useTheme();
 
   return (
-    <div className={`min-h-screen ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'} mt-4 rounded w-full`}>
+    <div className={`min-h-screen ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'} mt-4 rounded-xl w-full`}>
       <Navigation />
 
       <div className="max-w-8xl mx-auto px-4 sm:px-6 py-8">
