@@ -6,7 +6,7 @@ function Navbar() {
   const navItems = ["Home", "About", "Services", "Gallery", "Contact"];
 
   return (
-    <nav className="sticky top-1 bg-indigo-400 px-6 py-3 rounded-xl">
+    <nav className="sticky top-1 z-999 bg-indigo-400 px-6 py-3 rounded-xl">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <img

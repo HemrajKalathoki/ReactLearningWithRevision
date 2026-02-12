@@ -4,7 +4,7 @@ import BasicProps from "./components/BasicProps";
 import ChildrenProps from "./components/ChildrenProps";
 import RefProps from "./components/RefProps";
 import ComplexProps from "./components/ComplexProps";
-import ThemeToggler from "./components/ThemeToggler";
+import ThemeToggler, {ThemeProvider, useTheme} from "./components/ThemeToggler";
 
 function Navigation() {
   const sections = [
@@ -56,9 +56,12 @@ function Navigation() {
 }
 
 function PropsAndComponentsContent() {
-  const isDark = true;
+  // const isDark = true;
+
+  const {isDark} = useTheme();
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white mt-4 rounded w-full">
+    <div className={`min-h-screen ${isDark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'} mt-4 rounded w-full`}>
       <Navigation />
 
       <div className="max-w-8xl mx-auto px-4 sm:px-6 py-8">
@@ -66,10 +69,10 @@ function PropsAndComponentsContent() {
           <h1 className="text-2xl lg:text-4xl font-bold mb-4">
             React Props Explaining
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 lg:mb-2">
+          <p className="text-base sm:text-lg md:text-xl lg:mb-2">
             Learn how to use props in React components
           </p>
-          <div className="inline-block rounded-full mt-4 px-4 text-gray-300 text-sm sm:text-base">
+          <div className="inline-block rounded-full mt-4 px-4 text-sm sm:text-base">
             Built with NPM + Vite + React + TailwindCSS
           </div>
         </header>
@@ -105,7 +108,11 @@ function PropsAndComponentsContent() {
 }
 
 function PropsAndComponents() {
-  return <PropsAndComponentsContent />;
+  return (
+    <ThemeProvider>
+      <PropsAndComponentsContent />
+    </ThemeProvider>
+  );
 }
 
 export default PropsAndComponents;

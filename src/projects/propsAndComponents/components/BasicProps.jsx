@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Button({ text, color, size, onClick, disabled }) {
+export function Button({ text, color, size, onClick, disabled}) {
   return (
     <button
       onClick={onClick}
@@ -13,9 +13,11 @@ function Button({ text, color, size, onClick, disabled }) {
     ${color === "secondary" ? "bg-gray-500 text-white hover:bg-gray-600" : ""}
     ${color === "success" ? "bg-green-500 text-white hover:bg-green-600" : ""}
     ${color === "danger" ? "bg-red-500 text-white hover:bg-red-600" : ""}
+    ${color === "warning" ? "bg-yellow-500 text-white hover:bg-yellow-600" : ""}
 
     ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
     `}
+    
     >
       {text}
     </button>
